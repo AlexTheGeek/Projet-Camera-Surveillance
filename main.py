@@ -1,4 +1,4 @@
-import mail.py
-import mouvement.py
-import camera.py
+from mail.py import
+from mouvement.py import
+from camera.py import
 
