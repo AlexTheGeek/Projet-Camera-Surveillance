@@ -4,7 +4,8 @@ body
   background-color: grey;
 }
 
-.tete
+.tete h1
 {
   margin-left: 100px;
+  color: white;
 }
