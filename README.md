@@ -48,9 +48,19 @@ pip install imutils
 pip install Flask-BasicAuth
 `````
 
+
 ## Lancement du programme
 Lancez le programme avec la commande :
 ``````
 python main.py
 ``````
 On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000` dans un navigateur internet.
+
+
+
+
+
+
+
+
+###### Travail actuellement sur la partie du détecteur de mouvement et du serveur
