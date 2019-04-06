@@ -59,8 +59,5 @@ On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000`
 
 
 
-
-
-
-
-###### Travail actuellement sur la partie du détecteur de mouvement et du serveur
+###### Nous travaillons actuellement sur la partie du détecteur de mouvement et du serveur vidéo et enregistrement vidéo.
+###### Problème rencontrer dans le programme ``mouvement.py``
