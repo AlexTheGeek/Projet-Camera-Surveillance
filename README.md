@@ -1,7 +1,7 @@
 # Projet Caméra Surveillance Extérieure
 
 Dans ce projet nous utilisons une Raspberry Pi 3B+. 
-La caméra de surveilance fonctionne avec OpenCV4 pour la détection de mouvement. La caméra enverra un mail contenant une image du mouvement. La caméra possède aussi un serveur pour voir une vidéo en direct.
+La caméra de surveilance fonctionne avec OpenCV4 pour la détection de mouvement. La caméra enverra un mail contenant une image du mouvement d'objet. En complément, un détecteur de mouvement IR permet de détecter de mouvement de personne. La caméra possède aussi un serveur pour voir une vidéo en direct.
 
 ## Configuration de la Raspberry
 Dans ce projet, nous utilisons une Quimat Raspberry Pi Camera IR. Avant il faut activer sur la Raspberry 
