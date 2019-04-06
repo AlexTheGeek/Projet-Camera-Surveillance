@@ -23,3 +23,11 @@ OpenCV fonctionne sur un environnement virtuel. Pour y accéder utiliser les com
 source ~/.profile
 workon cv
 ```````
+
+
+## Fonctionnement du programme
+Lancez le programme avec la commande :
+``````
+python main.py
+``````
+On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000` dans un navigateur internet.
