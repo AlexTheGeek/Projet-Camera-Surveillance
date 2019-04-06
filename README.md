@@ -25,7 +25,7 @@ workon cv
 ```````
 
 
-## Fonctionnement du programme
+## Lancement du programme
 Lancez le programme avec la commande :
 ``````
 python main.py
