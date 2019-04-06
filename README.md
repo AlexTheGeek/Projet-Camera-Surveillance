@@ -17,13 +17,14 @@ sudo raspistill -o image.png
 ``````
 
 ## Installation de OpenCV4
-Nous avons besoin d'OpenCV4 pour la détection de mouvement d'objet. Pour installer OpenCV4, nous avons utilisez le [tutroriel](https://www.pyimagesearch.com/2018/09/26/install-opencv-4-on-your-raspberry-pi/).
+Nous avons besoin d'OpenCV4 pour la détection de mouvement d'objet. Pour installer OpenCV4 (Python 3), nous avons utilisez le [tutroriel](https://www.pyimagesearch.com/2018/09/26/install-opencv-4-on-your-raspberry-pi/).
 OpenCV fonctionne sur un environnement virtuel. Pour y accéder utiliser les commandes suivantes :
 ``````
 source ~/.profile
 workon cv
 ```````
 
+### bonjour
 
 ## Lancement du programme
 Lancez le programme avec la commande :
