@@ -5,6 +5,7 @@ La caméra de surveilance fonctionne avec OpenCV4 pour la détection de mouvemen
 
 ## Configuration de la Raspberry
 Dans ce projet, nous utilisons une Quimat Raspberry Pi Camera IR. Avant il faut activer la camera sur la Raspberry.
+
 Ouvrez le terminal et exécutez :
 ````
 sudo raspi-config
