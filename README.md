@@ -47,10 +47,33 @@ pip install imutils
 
 `````
 pip install Flask-BasicAuth
+``````
+
+## Personnalisation du programme
+Vous pouvez mofier la partie main en modifiant l'authentification au serveur de la raspberry pi :
+`````
+app.config['BASIC_AUTH_USERNAME'] = 'admin' #Changez l'utilisateur
+app.config['BASIC_AUTH_PASSWORD'] = 'admin' #Changez le mot de passe
+app.config['BASIC_AUTH_FORCE'] = True
 `````
 
+Dans le main, la modification de paramètres :
+``````
+email_update_interval = 600 #N'envoie un courriel qu'une seule fois dans cet intervalle de temps
+video_camera = VideoCamera(flip=True) #Crée un objet caméra, retournez verticalement
+object_classifier = cv2.CascadeClassifier("models/fullbody_recognition_model.xml") #OpenCV classifier
+``````
+Vous pouvez aussi utiliser d'autre object de détection en changant `"models/fullbody_recognition_model.xml"` dans `object_classifier = cv2.CascadeClassifier("models/fullbody_recognition_model.xml")` par les autres objets de détection qui sont dans le dossier `models`.
+
+Modifiez aussi les informations du mail :
+``````
+fromEmail = 'addressemaile@gmail.com' #Entrez une addresse mail Google d'envoie du mail
+fromEmailPassword = 'mdp' #Entrez le mot de passe du compte Google (Pas de double authentification)
+toEmail = 'addressemailr@gmail.com' #Entrez une addresse mail de réception
+``````
 
 ## Lancement du programme
+
 Lancez le programme avec la commande :
 ``````
 python main.py
@@ -60,6 +83,3 @@ On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000`
 
 
 
-###### Nous travaillons actuellement sur la partie du détecteur de mouvement et du serveur vidéo et enregistrement vidéo. Le serveur sera sur debian serveur sur une VM (VMware Fusion 10) pour tester toutes les foncitonnalités avant de faire un un ordinateur fixe.
-##### Nous travaillons aussi sur le partie noturne de la caméra pour activer le IR lorsqu'il fait nuit où tout le temps pour pouvoir voir dans la nuit.
-###### Problème rencontrer dans le programme ``mouvement.py``, toutes les minutes à 11 secondes il y a toujours un mouvement détecté même s'il y en a pas. Nous recherchons une solution.
