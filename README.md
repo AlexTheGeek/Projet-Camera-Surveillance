@@ -59,11 +59,11 @@ app.config['BASIC_AUTH_FORCE'] = True
 
 Dans le main, la modification de paramètres :
 ``````
-email_update_interval = 600 #N'envoie un courriel qu'une seule fois dans cet intervalle de temps
+email_update_interval = 10 #N'envoie un courriel qu'une seule fois dans cet intervalle de temps
 video_camera = VideoCamera(flip=True) #Crée un objet caméra, retournez verticalement
-object_classifier = cv2.CascadeClassifier("models/fullbody_recognition_model.xml") #OpenCV classifier
+object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml") #OpenCV classifier
 ``````
-Vous pouvez aussi utiliser d'autre object de détection en changant `"models/fullbody_recognition_model.xml"` dans `object_classifier = cv2.CascadeClassifier("models/fullbody_recognition_model.xml")` par les autres objets de détection qui sont dans le dossier `models`.
+Vous pouvez aussi utiliser d'autre object de détection en changant `"models/facial_recognition_model.xml"` dans `object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml")` par les autres objets de détection qui sont dans le dossier `models`.
 
 Modifiez aussi les informations du mail :
 ``````
