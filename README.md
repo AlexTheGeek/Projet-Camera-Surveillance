@@ -78,7 +78,7 @@ Lancez le programme avec la commande :
 ``````
 python main.py
 ``````
-On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000` dans un navigateur internet sur le réseau local. Pour visioner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour la raspberry : `http://<ip_box>:<port_ouvert>`.
+On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000` dans un navigateur internet sur le réseau local. Pour visioner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour la raspberry : `http://<ip_box>:<port_ouvert>`(Méthode non sécurisée).
 
 
 
