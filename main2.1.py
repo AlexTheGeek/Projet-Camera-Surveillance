@@ -38,7 +38,7 @@ def my_callback(channel):
     date = datetime.datetime.now()
     d = date.strftime("%S")
     print(d)
-    if (time.time() - last_epoch) > email_update_interval and d != 36:
+    if (time.time() - last_epoch) > email_update_interval and d != "36":
       last_epoch = time.time()
       print('Mouvement detecte  a :')
       date = datetime.datetime.now()
