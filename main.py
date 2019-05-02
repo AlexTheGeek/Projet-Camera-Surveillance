@@ -9,7 +9,7 @@ import threading
 
 email_update_interval = 10
 video_camera = VideoCamera(flip=True) 
-object_classifier = cv2.CascadeClassifier("models/fullbody_recognition_model.xml")
+object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml")
 
 
 app = Flask(__name__)
