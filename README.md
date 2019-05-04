@@ -3,6 +3,13 @@
 Dans ce projet nous utilisons une Raspberry Pi 3B+. 
 La caméra de surveilance fonctionne avec OpenCV4 pour la détection de mouvement. La caméra enverra un mail contenant une image du mouvement d'objet. En complément, un détecteur de mouvement IR permet de détecter de mouvement de personne. La caméra possède aussi un serveur pour voir une vidéo en direct.
 
+## Préparation de la Raspberry
+### Connexion de la Camera
+
+
+### Connexion du PIR HC-SR501
+
+
 ## Configuration de la Raspberry
 Dans ce projet, nous utilisons une Quimat Raspberry Pi Camera IR. Avant il faut activer la camera sur la Raspberry.
 
@@ -18,7 +25,73 @@ sudo raspistill -o image.png
 ``````
 ## Installation des dépendances
 ### Installation OpenCV4
-Nous avons besoin d'OpenCV4 pour la détection de mouvement d'objet. Pour installer OpenCV4 (Python 3), nous avons utilisez le [tutroriel](https://www.pyimagesearch.com/2018/09/26/install-opencv-4-on-your-raspberry-pi/).
+Nous avons besoin d'OpenCV4 (Python 3) pour la détection de mouvement d'objet.
+
+#### Installation des dépendance d'OpenCV4
+Commencez par faire les mises à jour de la Raspberry Pi :
+``````
+sudo apt-get update && sudo apt-get upgrade
+``````
+
+Installons les outils de développement (CMake) :
+```````
+sudo apt-get install build-essential cmake unzip pkg-config
+```````
+
+Installons des bibliothèques d'images et de vidéos :
+````````
+sudo apt-get install libjpeg-dev libpng-dev libtiff-dev
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+sudo apt-get install libxvidcore-dev libx264-dev
+`````````
+
+Installons une interface graphique utilisateur backend (GTK) :
+```````
+sudo apt-get install libgtk-3-dev
+````````
+
+Installons un paquet pour GTK :
+````````
+sudo apt-get install libcanberra-gtk*
+````````
+
+Installons deux paquets qui contiennent des optimisations numérique pour OpenCV4 :
+``````
+sudo apt-get install libatlas-base-dev gfortran
+``````
+
+Installation Python 3 :
+```````
+sudo apt-get install python3-dev
+````````
+
+#### Téléchargement d'OpenCV4 pour Rapsberry Pi
+Naviguez jusqu'au dossier `Home` de votre Raspberry Pi.
+```````
+wget -O opencv.zip https://github.com/opencv/opencv/archive/4.0.0.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.0.0.zip
+unzip opencv.zip
+unzip opencv_contrib.zip
+```````
+
+Renommons les répertoires:
+````````
+mv opencv-4.0.0 opencv
+mv opencv_contrib-4.0.0 opencv_contrib
+`````````
+
+#### Configuration de l'environnement virtuel de Python 3 pour OpenCV4
+
+
+
+#### CMake et compilation d'OpenCV4
+
+
+#### Relions OpenCV 4 à votre environnement virtuel Python 3
+
+
+
+#### Lancement d'OpenCV4
 OpenCV fonctionne sur un environnement virtuel. Pour y accéder utiliser les commandes suivantes :
 ``````
 source ~/.profile
@@ -73,11 +146,15 @@ toEmail = 'adressemaild@gmail.com' #Entrez une adresse mail de réception
 ``````
 
 ## Lancement du programme
-
 Lancez le programme avec la commande :
 ``````
 python main.py
 ``````
+Vous pouvez choisir quel type de reconnaissance vous souhaitez :  
+* `main.py` : reconnaissance avec la caméra (OpenCV) et envoie d'un mail avec prise d'une photo du mouvement
+* `main2.py` : reconnaissance avec le PIR et envoie d'un mail avec texte
+* `main2.1.py` : reconnaissance avec le PIr et envoie d'un mail et prise d'un photo du mouvement
+
 On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000` dans un navigateur internet sur le réseau local. Pour visioner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour la raspberry : `http://<ip_box>:<port_ouvert>`(Méthode non sécurisée).
 
 
