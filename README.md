@@ -81,15 +81,36 @@ mv opencv_contrib-4.0.0 opencv_contrib
 `````````
 
 #### Configuration de l'environnement virtuel de Python 3 pour OpenCV4
+Installons un Python Paquet Manager, pip :
+``````
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3 get-pip.py
+```````
+
+Installons virtualenv et virtualenvwrapper pour un environnment virtuel Python :
+```````
+sudo pip install virtualenv virtualenvwrapper
+sudo rm -rf ~/get-pip.py ~/.cache/pip
+````````
 
 
+
+
+Installons le paquet Python prérequis pour OpenCV, NumPy :
+``````
+pip install numpy
+``````
 
 #### CMake et compilation d'OpenCV4
 
 
+
 #### Relions OpenCV 4 à votre environnement virtuel Python 3
-
-
+Créons un lien symbolique depuis l'installation d'OpenCV dans le répertoire system site-packages vers notre environnement virtuel :
+```````
+cd ~/.virtualenvs/cv/lib/python3.5/site-packages/
+ln -s /usr/local/python/cv2/python-3.5/cv2.cpython-35m-arm-linux-gnueabihf.so cv2.so
+````````
 
 #### Lancement d'OpenCV4
 OpenCV fonctionne sur un environnement virtuel. Pour y accéder utiliser les commandes suivantes :
