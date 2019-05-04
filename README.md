@@ -1,7 +1,7 @@
 # Projet Caméra Surveillance
 
 Dans ce projet nous utilisons une Raspberry Pi 3B+. 
-La caméra de surveilance fonctionne avec OpenCV4 pour la détection de mouvement. La caméra enverra un mail contenant une image du mouvement d'objet. En complément, un détecteur de mouvement IR permet de détecter de mouvement de personne. La caméra possède aussi un serveur pour voir une vidéo en direct.
+La caméra de surveillance fonctionne avec OpenCV4 pour la détection de mouvement. La caméra enverra un mail contenant une image prise lors d'un mouvement. En complément, un détecteur de mouvement IR permet de détecter de mouvement de personne. La caméra possède aussi un serveur pour voir une vidéo en direct.
 
 ## Préparation de la Raspberry
 ### Connexion de la Camera
@@ -11,7 +11,7 @@ La caméra de surveilance fonctionne avec OpenCV4 pour la détection de mouvemen
 
 
 ## Configuration de la Raspberry
-Dans ce projet, nous utilisons une Quimat Raspberry Pi Camera IR. Avant il faut activer la camera sur la Raspberry.
+Dans ce projet, nous utilisons une Quimat Raspberry Pi Camera IR. Avant il faut activer la caméra sur la Raspberry.
 
 Ouvrez le terminal et exécutez :
 ````
@@ -93,8 +93,28 @@ sudo pip install virtualenv virtualenvwrapper
 sudo rm -rf ~/get-pip.py ~/.cache/pip
 ````````
 
+Modifions `~/.profile` :
+``````
+echo -e "\n# virtualenv and virtualenvwrapper" >> ~/.profile
+echo "export WORKON_HOME=$HOME/.virtualenvs" >> ~/.profile
+echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> ~/.profile
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.profile
+```````
+Vous pouvez aussi le modifier avec vim ou nano (un éditeur de texte du terminal).  
+  
+``````
+source ~/.profile
+``````
 
+Créons l'environnement virtuel OpenCV4 + Python 3:
+```````
+mkvirtualenv cv -p python3
+````````
 
+Vérifions que nous sommes bien dans l'environnement `cv`
+``````
+workon cv
+``````
 
 Installons le paquet Python prérequis pour OpenCV, NumPy :
 ``````
@@ -176,7 +196,8 @@ Vous pouvez choisir quel type de reconnaissance vous souhaitez :
 * `main2.py` : reconnaissance avec le PIR et envoie d'un mail avec texte
 * `main2.1.py` : reconnaissance avec le PIr et envoie d'un mail et prise d'un photo du mouvement
 
-On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000` dans un navigateur internet sur le réseau local. Pour visioner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour la raspberry : `http://<ip_box>:<port_ouvert>`(Méthode non sécurisée).
+On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000` dans un navigateur internet sur le réseau local.  
+Pour visioner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour la raspberry : `http://<ip_box>:<port_ouvert>`(Méthode non sécurisée).
 
 
 
