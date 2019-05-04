@@ -67,9 +67,9 @@ Vous pouvez aussi utiliser d'autre object de détection en changant `"models/fac
 
 Modifiez aussi les informations du mail :
 ``````
-fromEmail = 'addressemaile@gmail.com' #Entrez une addresse mail Google d'envoie du mail
+fromEmail = 'adressemaile@gmail.com' #Entrez une adresse mail Google d'envoie du mail
 fromEmailPassword = 'mdp' #Entrez le mot de passe du compte Google (Pas de double authentification)
-toEmail = 'addressemailr@gmail.com' #Entrez une addresse mail de réception
+toEmail = 'adressemaild@gmail.com' #Entrez une adresse mail de réception
 ``````
 
 ## Lancement du programme
