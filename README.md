@@ -87,7 +87,7 @@ wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 ```````
 
-Installons virtualenv et virtualenvwrapper pour un environnment virtuel Python :
+Installons `virtualenv` et `virtualenvwrapper` pour un environnment virtuel Python :
 ```````
 sudo pip install virtualenv virtualenvwrapper
 sudo rm -rf ~/get-pip.py ~/.cache/pip
@@ -139,7 +139,13 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D OPENCV_ENABLE_NONFREE=ON \
     -D INSTALL_PYTHON_EXAMPLES=OFF \
     -D BUILD_EXAMPLES=OFF ..
-``````````
+``````````  
+
+Vérifiez que dans le terminal vous avez `Non-free algorithms: YES`.  
+Dans `Python 3`:  
+`Interpreter: .../.virtualenvs/cv/...`  
+`numpy: .../.virtualenvs/cv/...`  
+
 
 
 
@@ -159,25 +165,25 @@ workon cv
 ```````
 
 ### Installaiton Flask
-
+Fask est un microframework pour des applications web Python,pour le routage d'URL de site.
 `````
 pip install flask
 `````
 
-### Installation Picamera
-
+### Installation PiCamera
+PiCamera est un paquet qui permet d'avoir une interface pour le module caméra Raspberry Pi pour Python 3.
 `````
 pip install picamera
 `````
 
 ### Installation Imutils
-
+Imutils est une série de fonction de traitement d'image plus simple pour OpenCV4 et Python 3.
 `````
 pip install imutils
 `````
 
 ### Installation Flask-BasicAuth
-
+Flask-BasicAuth est une extension Flask qui permet de protéger une page web grâce à une authentification ©par accès de base HTTP.
 `````
 pip install Flask-BasicAuth
 ``````
