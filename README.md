@@ -131,7 +131,7 @@ mkdir build
 cd build
 ```````
 
-Execution CMake pour OpenCV4
+Execution CMake pour OpenCV4 :
 ````````
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
@@ -148,6 +148,7 @@ Vérifiez que dans le terminal vous avez `Non-free algorithms: YES`.
 Dans `Python 3`:  
 `Interpreter: .../.virtualenvs/cv/...`  
 `numpy: .../.virtualenvs/cv/...`  
+
 
 
 
@@ -225,7 +226,18 @@ Vous pouvez choisir quel type de reconnaissance vous souhaitez :
 * `main2.1.py` : reconnaissance avec le PIr et envoie d'un mail et prise d'un photo du mouvement
 
 On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000` dans un navigateur internet sur le réseau local.  
-Pour visioner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour la raspberry : `http://<ip_box>:<port_ouvert>`(Méthode non sécurisée).
+Pour visioner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour la raspberry : `http://<ip_box>:<port_ouvert>`(Méthode non sécurisée).  
+
+
+## Réalisation supplémentaire
+### Réalisation de l'application
+
+
+
+
+### Réalisation du support pour la caméra et du PIR
+Réalisation du prototype de support sur SolidWorks.
+Impression 3D du support.
 
 
 
