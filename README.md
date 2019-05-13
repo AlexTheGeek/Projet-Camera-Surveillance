@@ -245,9 +245,11 @@ Pour visioner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour
 
 ### Réalisation du support pour la caméra et du PIR
 Réalisation du prototype de support sur SolidWorks.
-Impression 3D du support.
-###### Ajouter une image et lien du SolidWorks
-
+Impression 3D du support.  
+[Plan de la carte Raspberry Pi 3B+](https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi_MECH_3bplus.pdf)  
+[Plan de la boite Raspberry Pi 3B+](https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi_MECH_3bplus_case.pdf)  
+[Plan du support]()  
+[Fichier SolidWorks du support]()  
 
 ## Documentation
 [Manuel d'utilisation utilisateur]()  
