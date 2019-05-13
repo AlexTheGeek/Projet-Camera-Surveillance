@@ -237,7 +237,7 @@ On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000`
 Pour visioner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour la raspberry : `http://<ip_box>:<port_ouvert>`(Méthode non sécurisée).  
 
 
-## Réalisation supplémentaire
+## Réalisations supplémentaires
 ### Réalisation de l'application
 
 
@@ -250,7 +250,7 @@ Impression 3D du support.
 
 
 ## Documentation
-[Manuel d'uilisation utilisateur]()
-[Présentation Raspberry]()
-[Port Raspberry]()
+[Manuel d'utilisation utilisateur]()  
+[Présentation Raspberry](https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf)  
+[Port Raspberry](https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf)  
 
