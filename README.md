@@ -4,13 +4,21 @@ Dans ce projet nous utilisons une Raspberry Pi 3B+.
 La caméra de surveillance fonctionne avec OpenCV4 pour la détection de mouvement. La caméra enverra un mail contenant une image prise lors d'un mouvement. En complément, un détecteur de mouvement IR permet de détecter de mouvement de personne. La caméra possède aussi un serveur pour voir une vidéo en direct.
 
 ## Présentation de la Raspberry utlisée
-
+La Raspberry Pi 3 B+ possède le Wifi 2,4GHz et 5GHz faciitant la connexion de la Raspberry à internet. La Raspberry possède un port ethernet qui permet d'avoir un débit internet plus fiable pour la Raspberry Pi. Vous pouvez vous référez à la documentation officiel de la Raspberry Pi : [présentation](https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf).
 
 ## Préparation de la Raspberry
 ### Connexion de la Camera
-
+Pour connecter la camera, il faut bracher chaque broche du cable de la caméra dans le port Camera de la Raspberry Pi.
+###### Ajouter une image
 
 ### Connexion du PIR HC-SR501
+Dans ce projet, nous utiliserons les pin 2 - 6 - 26 mais vous pouvez utilisez d'autres port en suivant la [documentation de la Raspberry](https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf).  
+Identifiez chaque port du PIR en soulevant le "petit chapeau" : 
+###### Ajouter une image
+Tout à d'abord connecter le pin VCC du PIR sur le pin 2 (VCC 5V) de la Raspberry Pi.  
+Après connectez grnd du PIR sur le pin 6 (GRND) de la Raspberry Pi.  
+Pour finir sur le dernier port du PIR (OUT) sur le pin 26 (GPIO 7) de la Raspberry Pi.  
+###### Ajouter une image
 
 
 ## Configuration de la Raspberry
@@ -238,6 +246,11 @@ Pour visioner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour
 ### Réalisation du support pour la caméra et du PIR
 Réalisation du prototype de support sur SolidWorks.
 Impression 3D du support.
+###### Ajouter une image et lien du SolidWorks
 
 
+## Documentation
+[Manuel d'uilisation utilisateur]()
+[Présentation Raspberry]()
+[Port Raspberry]()
 
