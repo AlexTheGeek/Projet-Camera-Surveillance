@@ -252,7 +252,5 @@ Impression 3D du support.
 [Fichier SolidWorks du support]()  
 
 ## Documentation
-[Manuel d'utilisation utilisateur]()  
-[Présentation Raspberry](https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf)  
-[Port Raspberry](https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf)  
+[Manuel d'utilisation utilisateur]()   
 
