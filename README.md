@@ -1,6 +1,6 @@
 # Projet Caméra Surveillance
-
-Dans ce projet nous utilisons une Raspberry Pi 3B+. 
+Bonjour  
+Dans ce projet nous utilisons une Raspberry Pi 3B+.
 La caméra de surveillance fonctionne avec OpenCV4 pour la détection de mouvement. La caméra enverra un mail contenant une image prise lors d'un mouvement. En complément, un détecteur de mouvement IR permet de détecter de mouvement de personne. La caméra possède aussi un serveur pour voir une vidéo en direct.
 
 ## Présentation du matériel
@@ -15,7 +15,7 @@ Pour connecter la camera, il faut bracher chaque broche du cable de la caméra d
 
 ### Connexion du PIR HC-SR501
 Dans ce projet, nous utiliserons les pin 2 - 6 - 26 mais vous pouvez utilisez d'autres port en suivant la [documentation de la Raspberry](https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf).  
-Identifiez chaque port du PIR en soulevant le "petit chapeau" : 
+Identifiez chaque port du PIR en soulevant le "petit chapeau" :
 ###### Ajouter une image
 Tout à d'abord connecter le pin VCC du PIR sur le pin 2 (VCC 5V) de la Raspberry Pi.  
 Après connectez grnd du PIR sur le pin 6 (GRND) de la Raspberry Pi.  
@@ -114,7 +114,7 @@ echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> ~/.profile
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.profile
 ```````
 Vous pouvez aussi le modifier avec vim ou nano (un éditeur de texte du terminal).  
-  
+
 ``````
 source ~/.profile
 ``````
@@ -255,4 +255,3 @@ Impression 3D du support.
 
 ## Documentation
 [Manuel d'utilisation utilisateur]()   
-
