@@ -158,6 +158,18 @@ Dans `Python 3`:
 `Interpreter: .../.virtualenvs/cv/...`  
 `numpy: .../.virtualenvs/cv/...`  
 
+Compilation d'OpenCV4 :  
+````
+make -j4
+```
+Si des erreurs apparaissent vous pouvez seulement faire `make`.  
+
+Installation d'OpenCV4
+`````
+sudo make install
+sudo ldconfig
+```````
+
 
 
 
