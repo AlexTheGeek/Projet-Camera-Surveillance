@@ -15,11 +15,12 @@ Pour connecter la camera, il faut bracher chaque broche du cable de la caméra d
 ### Connexion du PIR HC-SR501
 Dans ce projet, nous utiliserons les pin 2 - 6 - 26 mais vous pouvez utilisez d'autres port en suivant la [documentation de la Raspberry](https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf).  
 Identifiez chaque port du PIR en soulevant le "petit chapeau" :
-###### Ajouter une image
+###### Ajouter une image  
+
 Tout à d'abord connecter le pin VCC du PIR sur le pin 2 (VCC 5V) de la Raspberry Pi.  
 Après connectez grnd du PIR sur le pin 6 (GRND) de la Raspberry Pi.  
 Pour finir sur le dernier port du PIR (OUT) sur le pin 26 (GPIO 7) de la Raspberry Pi.  
-###### Ajouter une image
+###### Ajouter une image  
 
 
 ## Configuration de la Raspberry
@@ -245,21 +246,26 @@ Vous pouvez choisir quel type de reconnaissance vous souhaitez :
 
 On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000` dans un navigateur internet sur le réseau local.  
 Pour visioner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour la raspberry : `http://<ip_box>:<port_ouvert>`(Méthode non sécurisée).  
+De plus, pour un fonctionnement optimal, vous pouvez utiliser une ip statique pour la raspberry pour éviter de recherher l'ip à chaque fois.  
 
 
 ## Réalisations supplémentaires
 ### Réalisation de l'application
-
+Début de l'application un prototype de l'application faite sur Adobe XD.  
+[Prototype (Adobe XD)](https://alexthegeek.github.io/Projet-Camera-Surveillance/Application/Prototype_Cam.xd)  
+[Prototype (zip --> png)](https://alexthegeek.github.io/Projet-Camera-Surveillance/Application/Prototype_app.zip)  
+Développement de l'application avec [Ionic](https://ionicframework.com/)  
 
 
 
 ### Réalisation du support pour la caméra et du PIR
-Réalisation du prototype de support sur SolidWorks.
-Impression 3D du support.  
-[Plan de la carte Raspberry Pi 3B+](https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi_MECH_3bplus.pdf)  
+Réalisation du prototype de support sur SolidWorks puis son impression 3D grâce à l'imprimante 3D Ultimaker.
+[Plan de la carte Raspberry Pi 3B+](https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi_MECH_3bplus.pdf)    
 [Plan de la boite Raspberry Pi 3B+](https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi_MECH_3bplus_case.pdf)  
-[Plan du support]()  
-[Fichier SolidWorks du support]()  
+[Fichier SolidWorks du support (zip)](https://alexthegeek.github.io/Projet-Camera-Surveillance/SolidWorks/SolidWorks.zip) 
 
 ## Documentation
-[Manuel d'utilisation utilisateur](https://alexthegeek.github.io/Projet-Camera-Surveillance/manuel.pdf)   
+[Manuel d'utilisation utilisateur](https://alexthegeek.github.io/Projet-Camera-Surveillance/Document/manuel.pdf)   
+[Cahier des charges](https://alexthegeek.github.io/Projet-Camera-Surveillance/Document/Cahier_des_charges.pdf)  
+[Planning](https://alexthegeek.github.io/Projet-Camera-Surveillance/Document/Planning.pdf)  
+[Compte Rendu](https://alexthegeek.github.io/Projet-Camera-Surveillance/Document/Compte_Rendu.pdf)  
