@@ -240,7 +240,8 @@ python main.py
 Vous pouvez choisir quel type de reconnaissance vous souhaitez :  
 * `main.py` : reconnaissance avec la caméra (OpenCV) et envoie d'un mail avec prise d'une photo du mouvement
 * `main2.py` : reconnaissance avec le PIR et envoie d'un mail avec texte
-* `main2.1.py` : reconnaissance avec le PIr et envoie d'un mail et prise d'un photo du mouvement
+* `main2.1.py` : reconnaissance avec le PIR et envoie d'un mail et prise d'une photo du mouvement
+* `main3.py`: reconnaissance avec le PIR et la caméra (facial) et envoie d'un mail et prise d'une photo du mouvement
 
 On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000` dans un navigateur internet sur le réseau local.  
 Pour visioner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour la raspberry : `http://<ip_box>:<port_ouvert>`(Méthode non sécurisée).  
