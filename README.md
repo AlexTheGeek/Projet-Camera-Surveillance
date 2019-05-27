@@ -265,7 +265,7 @@ Réalisation du prototype de support sur SolidWorks puis son impression 3D grâc
 [Fichier SolidWorks du support (zip)](https://alexthegeek.github.io/Projet-Camera-Surveillance/SolidWorks/SolidWorks.zip) 
 
 ## Documentation
-[Manuel d'utilisation utilisateur](https://alexthegeek.github.io/Projet-Camera-Surveillance/Document/manuel.pdf)   
-[Cahier des charges](https://alexthegeek.github.io/Projet-Camera-Surveillance/Document/Cahier_des_charges.pdf)  
-[Planning](https://alexthegeek.github.io/Projet-Camera-Surveillance/Document/Planning.pdf)  
-[Compte Rendu](https://alexthegeek.github.io/Projet-Camera-Surveillance/Document/Compte_Rendu.pdf)  
+[Manuel d'utilisation utilisateur](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/manuel.pdf)   
+[Cahier des charges](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Cahier_des_charges.pdf)  
+[Planning](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Planning.pdf)  
+[Compte Rendu](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Compte_Rendu.pdf)  
