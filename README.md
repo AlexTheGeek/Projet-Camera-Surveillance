@@ -18,7 +18,7 @@
 8. [Réalisations supplémentaires](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#r%C3%A9alisations-suppl%C3%A9mentaires)
     * [Réalisation de l'application](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#r%C3%A9alisation-de-lapplication)
     * [Réalisation du support pour la caméra et le PIR](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#r%C3%A9alisation-du-support-pour-la-cam%C3%A9ra-et-du-pir)
-9. [Documentation](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#documentation)
+9. [Documents supplémentaires](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#documentation)
 
 
 ## Présentation du projet
@@ -289,7 +289,7 @@ Réalisation du prototype de support sur SolidWorks puis son impression 3D grâc
 [Fichier SolidWorks du support (zip)](https://alexthegeek.github.io/Projet-Camera-Surveillance/SolidWorks/SolidWorks.zip) 
 
 
-## Documentation
+## Documents supplémentaires
 [Manuel d'utilisation utilisateur](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/manuel.pdf)   
 [Cahier des charges](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Cahier_des_charges.pdf)  
 [Planning](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Planning.pdf)  
