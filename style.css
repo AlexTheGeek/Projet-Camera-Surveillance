@@ -1,20 +1,32 @@
 body
 {
   margin: 0 0 0 0;
-  background-color: grey;
+  background-color: white;
 }
+
+.tete
+{
+  display: flex;
+}
+
+.titre
+{
+  width: 25%;
+}
+
 
 .tete h1
 {
   margin-left:10%;
-  color: white;
+  color: black;
 }
 
 .nav
 {
   display: flex;
   width: 50%;
-  margin-left: 45%;
+  margin-left: 10%;
+  margin-top:2%;
 }
 
 .nav1
@@ -25,14 +37,23 @@ body
 
 .tete a
 {
-  color: white;
+  color: grey;
   text-decoration: none;
 }
 
 
+.nav1 a:hover
+{
+  color: red;
+  border-style: solid;
+  border-width: thin;
+}
+
+
+
 .corps
 {
-  height: 800px;
+
   margin-left: 2%;
   margin-right: 2%;
   margin-bottom: 10%;
@@ -47,13 +68,14 @@ body
 
 .pied a
 {
-  color: white;
+  color: grey;
   text-decoration: none;
   font-size: 15px;
 }
 
 .pied a:hover
 {
+  color: blue;
   border-bottom-style: dotted;
   border-bottom-width: thin;
 }

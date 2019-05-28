@@ -17,7 +17,7 @@
           <a href="installation.html">Installation</a>
         </div>
         <div class="nav1">
-          <a href="documentation.html">Documentation</a>
+          <a href="documentation.html" >Documentation</a>
         </div>
         <div class="nav1">
           <a href="contact.php">Contact</a>
@@ -30,7 +30,7 @@
     </div>
 <hr>
     <div class="corps">
-      
+    <h2>Contact</h2>
     </div>
 <hr>
     <div class="pied">
