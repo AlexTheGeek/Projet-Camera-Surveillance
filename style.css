@@ -49,15 +49,61 @@ body
   border-width: thin;
 }
 
+.code
+{
+  width: 50%;
+  background-color: gainsboro;
+  color: black;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /*font-family: monospace;*/
+}
+
 
 
 .corps
 {
-
+  display: flex;
+  width: 97%;
   margin-left: 2%;
   margin-right: 2%;
   margin-bottom: 10%;
   margin-top: 1%;
+}
+
+.corpsg
+{
+  width: 80%;
+
+}
+
+.corpsd
+{
+  width: 20%;
+  height: 430px;
+  padding-top: 5px;
+  padding-left: 15px;
+  margin-left: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+}
+
+.corpsd a
+{
+  text-decoration: none;
+  color: grey;
+}
+
+.corpsd a:hover
+{
+  color: red;
+  border-bottom-style: solid;
+  border-width: thin;
 }
 
 .pied
