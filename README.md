@@ -1,7 +1,7 @@
 # Projet Caméra Surveillance
 
 ## Sommaire
-1. [Présentation du projet]()
+1. [Présentation du projet](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#pr%C3%A9sentation-du-projet)
 2. [Présentation du matériel](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#pr%C3%A9sentation-du-mat%C3%A9riel)
 3. [Présentation de la Raspberry Pi](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#pr%C3%A9paration-de-la-raspberry)
     * [Connexion dela caméra](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#connexion-de-la-camera)
@@ -19,6 +19,8 @@
     * [Réalisation de l'application](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#r%C3%A9alisation-de-lapplication)
     * [Réalisation du support pour la caméra et le PIR](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#r%C3%A9alisation-du-support-pour-la-cam%C3%A9ra-et-du-pir)
 9. [Documents supplémentaires](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#documentation)
+10. [Crédit](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#cr%3A9dit)
+11. [Contact](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#contact)
 
 
 ## Présentation du projet
@@ -295,6 +297,13 @@ Réalisation du prototype de support sur SolidWorks puis son impression 3D grâc
 [Planning](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Planning.pdf)  
 [Compte Rendu](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Compte_Rendu.pdf)  
 
+## Crédit
+Projet de première année STPI à l'INSA Centre Val de Loire.  
+Membre de l'équipe :
+* Alexis Brunet
+* Matthieu Maindroux
+* Omar Hadhar
+* Roman Magnier
 
 ## Contact
 Mail : [projetcamera2019@gmail.com](mailto:projetcamera2019@gmail.com)
