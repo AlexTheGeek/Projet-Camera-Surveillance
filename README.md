@@ -19,7 +19,7 @@
     * [Réalisation de l'application](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#r%C3%A9alisation-de-lapplication)
     * [Réalisation du support pour la caméra et le PIR](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#r%C3%A9alisation-du-support-pour-la-cam%C3%A9ra-et-du-pir)
 9. [Documents supplémentaires](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#documentation)
-10. [Crédit](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#cr%3A9dit)
+10. [Crédit](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#cr%C3%A9dit)
 11. [Contact](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#contact)
 
 
