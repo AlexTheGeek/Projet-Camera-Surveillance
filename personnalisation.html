@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <title>Projet INSA | Accueil</title>
+    <title>Projet Caméra INSA 2019 | Personnalisation du programme</title>
 </head>
 
 <body>
     <div class="tete">
         <div class="titre">
             <a href="index.html">
-                <h1>Projet INSA Caméra</h1>
+                <h1>Projet Caméra INSA 2019</h1>
             </a>
         </div>
         <!---   <div class="nav">
@@ -31,7 +31,41 @@
     <div class="corps">
         <div class="corpsg">
             <h1>Personnalisation du programme</h1>
-
+            <p>
+                Vous pouvez mofier la partie main en modifiant l'authentification au serveur de la raspberry pi :
+            </p>
+            <div class="code">
+                <code>
+                    app.config['BASIC_AUTH_USERNAME'] = 'admin' #Changez l'utilisateur <br>
+                    app.config['BASIC_AUTH_PASSWORD'] = 'admin' #Changez le mot de passe <br>
+                    app.config['BASIC_AUTH_FORCE'] = True <br>
+                </code>
+            </div>
+            <p>
+                Dans le main, la modification de paramètres :
+            </p>
+            <div class="code">
+                <code>
+                    email_update_interval = 10 #N'envoie un courriel qu'une seule fois dans cet intervalle de temps <br>
+                    video_camera = VideoCamera(flip=True) #Crée un objet caméra, retournez verticalement <br>
+                    object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml") #OpenCV classifier 
+                </code>
+            </div>
+            <p>
+                Vous pouvez aussi utiliser d'autre object de détection en changant <code class="codet">"models/facial_recognition_model.xml"</code> dans
+                <code class="codet">object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml")</code> par les autres objets de détection qui
+                sont dans le dossier <code class="codet">models</code>.
+                <br>
+                <br>
+                Modifiez aussi les informations du mail :
+            </p>
+            <div class="code">
+                <code>
+                    fromEmail = 'adressemaile@gmail.com' #Entrez une adresse mail Google d'envoie du mail <br>
+                    fromEmailPassword = 'mdp' #Entrez le mot de passe du compte Google (Pas de double authentification) <br>
+                    toEmail = 'adressemaild@gmail.com' #Entrez une adresse mail de réception 
+                </code>
+            </div>
         </div>
         <div class="corpsd">
             <h1>Sommaire</h1>
@@ -66,7 +100,7 @@
     </div>
     <hr>
     <div class="pied">
-        <a href="contact.php">Contact</a><br>
+        <a href="mailto:projetcamera2019@gmail.com">Contact</a><br>
         <a href="credit.html">©2019 - Crédit</a>
     </div>
 </body>

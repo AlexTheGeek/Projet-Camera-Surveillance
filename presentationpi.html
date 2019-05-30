@@ -11,7 +11,7 @@
     <div class="tete">
         <div class="titre">
             <a href="index.html">
-                <h1>Projet INSA Caméra</h1>
+                <h1>Projet Caméra INSA 2019</h1>
             </a>
         </div>
         <!---   <div class="nav">
@@ -31,7 +31,27 @@
     <div class="corps">
         <div class="corpsg">
             <h1>Présentation de la Raspberry Pi</h1>
-
+            <h2 id="cocam">Connexion de la Camera</h2>
+            <p>
+                Pour connecter la camera, il faut bracher chaque broche du cable de la caméra dans le port Camera de la Raspberry Pi.
+                <br>
+                <!--Ajouter une image-->
+            </p>
+            <h2 id="copir">Connexion du PIR HC-SR501</h2>
+            <p>
+                                Dans ce projet, nous utiliserons les pin 2 - 6 - 26 mais vous pouvez utilisez d'autres port en suivant la <a href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf">documentation
+                                de la Raspberry</a>.
+                                Identifiez chaque port du PIR en soulevant le "petit chapeau" :
+                                <br>
+                                <br>
+                                <!--Ajouter une image-->
+                                Tout à d'abord connecter le pin VCC du PIR sur le pin 2 (VCC 5V) de la Raspberry Pi.
+                                Après connectez grnd du PIR sur le pin 6 (GRND) de la Raspberry Pi.
+                                Pour finir sur le dernier port du PIR (OUT) sur le pin 26 (GPIO 7) de la Raspberry Pi.
+                                <br>
+                                <br>
+                                <!--Ajouter une image-->
+            </p>
         </div>
         <div class="corpsd">
             <h1>Sommaire</h1>
@@ -66,7 +86,7 @@
     </div>
     <hr>
     <div class="pied">
-        <a href="contact.php">Contact</a><br>
+        <a href="mailto:projetcamera2019@gmail.com">Contact</a><br>
         <a href="credit.html">©2019 - Crédit</a>
     </div>
 </body>

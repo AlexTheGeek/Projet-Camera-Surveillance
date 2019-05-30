@@ -11,7 +11,7 @@
     <div class="tete">
         <div class="titre">
             <a href="index.html">
-                <h1>Projet INSA Caméra</h1>
+                <h1>Projet Caméra INSA 2019</h1>
             </a>
         </div>
         <!---   <div class="nav">
@@ -31,7 +31,26 @@
     <div class="corps">
         <div class="corpsg">
             <h1>Configuration de la Raspberry Pi</h1>
-
+            <p>
+                Dans ce projet, nous utilisons une Quimat Raspberry Pi Camera IR. Avant il faut activer la caméra sur la Raspberry.
+                <br>
+                Ouvrez le terminal et exécutez :
+            </p>
+            <div class="code">
+                <code>
+                    sudo raspi-config
+                </code>
+            </div>
+            <p>
+                Sélectionnez <code class="codet">Interface Options</code> puis <code class="codet">Camera</code> et activez-la et cliquez sur <code class="codet">Finish</code>.
+                <br>
+                Pour vérifier que la caméra marche entrez :
+            </p>
+            <div class="code">
+                <code>
+                    sudo raspistill -o image.png
+                </code>
+            </div>
         </div>
         <div class="corpsd">
             <h1>Sommaire</h1>
@@ -66,7 +85,7 @@
     </div>
     <hr>
     <div class="pied">
-        <a href="contact.php">Contact</a><br>
+        <a href="mailto:projetcamera2019@gmail.com">Contact</a><br>
         <a href="credit.html">©2019 - Crédit</a>
     </div>
 </body>

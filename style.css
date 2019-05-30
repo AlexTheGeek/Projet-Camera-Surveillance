@@ -51,7 +51,7 @@ body
 
 .code
 {
-  width: 50%;
+  width: 70%;
   background-color: gainsboro;
   color: black;
   padding-top: 10px;
@@ -61,6 +61,11 @@ body
   margin-top: 10px;
   margin-bottom: 10px;
   /*font-family: monospace;*/
+}
+
+.codet
+{
+  background-color: gainsboro;
 }
 
 
