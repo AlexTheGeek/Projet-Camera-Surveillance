@@ -68,6 +68,39 @@ body
   background-color: gainsboro;
 }
 
+.bldoc
+{
+  display: flex;
+
+}
+
+.bldoc a
+{
+  text-decoration: none;
+}
+
+.bodoc
+{
+  background-color: rgb(26, 78, 126);
+  color: white;
+  width: 170px;
+  text-align: center;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 12px #555;
+}
+
+.bodoc:hover
+{
+  background-color: rgb(247, 111, 111);
+  color: black;
+}
+
+
 
 
 .corps
@@ -96,6 +129,7 @@ body
   background-color: black;
   color: white;
   border-radius: 30px;
+  box-shadow: 10px 10px 12px #555;
 }
 
 .corpsd a
