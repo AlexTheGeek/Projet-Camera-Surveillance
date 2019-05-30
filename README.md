@@ -294,3 +294,7 @@ Réalisation du prototype de support sur SolidWorks puis son impression 3D grâc
 [Cahier des charges](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Cahier_des_charges.pdf)  
 [Planning](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Planning.pdf)  
 [Compte Rendu](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Compte_Rendu.pdf)  
+
+
+## Contact
+Mail : [projetcamera2019@gmail.com](projetcamera2019@gmail.com)
