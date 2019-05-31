@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Ionic App</title>
+
+  <base href="/" />
+
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+</head>
+
+<body>
+  <app-root></app-root>
+  <script>
+    window.addEventListener("load", function(event){
+        document.getElementsByTagName("ion-title")[0].innerHTML = "<b>Live video</b>";
+        let div = document.getElementsByClassName("ion-padding")[0];
+        div.innerHTML = "";
+        {
+            let s = div.style;
+            s.paddingLeft = "0px";
+            s.paddingRight = "0px";
+            s.paddingTop = "0px";
+            s.paddingBottom = "16px";
+        }
+        let iframe = document.createElement("iframe");
+        iframe.src = "https://www.youtube.com/embed/coYw-eVU0Ks";
+        iframe.frameborder="0";
+        iframe.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+        {
+            let s = iframe.style;
+            s.width = "100%";
+            s.margin = "0px";
+            s.border = "none";
+        }
+        div.appendChild(iframe);
+        /*
+        */
+        let detail_div = document.createElement("div");
+        {
+            let s = detail_div.style;
+            s.padding = "8px";
+            s.margin = "0px";
+        }
+        let h1 = document.createElement("h1");
+        {
+            let s = h1.style;
+            s.margin = "0px";
+        }
+        h1.innerHTML = "<b>Title</b>";
+        detail_div.appendChild(h1);
+        /*
+        */
+        let p = document.createElement("p");
+        {
+            let s = p.style;
+            s.marginLeft = "8px";
+            s.fontSize = "16px";
+        }
+        p.innerHTML = "[description]";
+        detail_div.appendChild(p);
+        div.appendChild(detail_div);
+        
+        /*
+        *
+        */
+        
+        window.addEventListener("resize", function(){
+            /*console.log("resize");*/
+            iframe.style.height = String(~~((window.innerWidth/789)*444)) + "px";
+        }, false);
+        
+        /*
+        *
+        */
+		
+		document.getElementsByTagName("iframe")[0].style.height = String(~~((window.innerWidth/789)*444)) + "px";
+    }, false);
+	
+	
+  </script>
+</body>
+
+</html>
