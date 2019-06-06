@@ -20,7 +20,8 @@
     * [Réalisation du support pour la caméra et le PIR](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#r%C3%A9alisation-du-support-pour-la-cam%C3%A9ra-et-du-pir)
 9. [Documents supplémentaires](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#documentation)
 10. [Crédit](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#cr%C3%A9dit)
-11. [Contact](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#contact)
+11. [Liens]()
+12. [Contact](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#contact)
 
 
 ## Présentation du projet
@@ -304,6 +305,10 @@ Membre de l'équipe :
 * Matthieu Maindroux
 * Omar Hadhar
 * Roman Magnier
+
+## Liens
+[Chaine Youtube](https://www.youtube.com/channel/UCkh9bHsU9Y0lxfIJOGlvY6A?view_as=subscriber)
+[Site Web](https://alexthegeek.github.io/Projet-Camera-Surveillance/)
 
 ## Contact
 Mail : [projetcamera2019@gmail.com](mailto:projetcamera2019@gmail.com)
