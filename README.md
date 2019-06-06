@@ -282,7 +282,8 @@ Pour connaître l'adresse ip de la raspberry pi vous pouvez taper dans le termin
 ### Réalisation de l'application
 Début de l'application un prototype de l'application faite sur Adobe XD.  
 [Prototype (Adobe XD)](https://alexthegeek.github.io/Projet-Camera-Surveillance/Application/Prototype_Cam.xd)  
-[Prototype (zip --> png)](https://alexthegeek.github.io/Projet-Camera-Surveillance/Application/Prototype_app.zip)  
+[Prototype (zip --> png)](https://alexthegeek.github.io/Projet-Camera-Surveillance/Application/Prototype_App.zip)  
+[Prototype (zip --> png(iPhone - iPad - Android (Mobile et Tablette))](https://alexthegeek.github.io/Projet-Camera-Surveillance/Application/Prototype_App_V2.zip)  
 Développement de l'application avec [Ionic](https://ionicframework.com/)  
 
 
@@ -291,7 +292,7 @@ Développement de l'application avec [Ionic](https://ionicframework.com/)
 Réalisation du prototype de support sur SolidWorks puis son impression 3D grâce à l'imprimante 3D Ultimaker.  
 [Plan de la carte Raspberry Pi 3B+](https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi_MECH_3bplus.pdf)    
 [Plan de la boite Raspberry Pi 3B+](https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi_MECH_3bplus_case.pdf)  
-[Fichier SolidWorks du support (zip)](https://alexthegeek.github.io/Projet-Camera-Surveillance/SolidWorks/SolidWorks.zip) 
+[Fichier SolidWorks du support (zip)](https://alexthegeek.github.io/Projet-Camera-Surveillance/SolidWorks/SolidWorks_VFinal.zip) 
 
 
 ## Documents supplémentaires
