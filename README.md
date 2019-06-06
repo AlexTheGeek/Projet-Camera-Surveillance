@@ -20,7 +20,7 @@
     * [Réalisation du support pour la caméra et le PIR](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#r%C3%A9alisation-du-support-pour-la-cam%C3%A9ra-et-du-pir)
 9. [Documents supplémentaires](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#documentation)
 10. [Crédit](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#cr%C3%A9dit)
-11. [Liens]()
+11. [Liens](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#liens)
 12. [Contact](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#contact)
 
 
@@ -35,18 +35,20 @@ Nous utilisons aussi le PIR HC-SR501 qui possède une détection de mouvement pa
 
 ## Préparation de la Raspberry
 ### Connexion de la Camera
+![CAM1](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/CAM1.jpg)
 Pour connecter la camera, il faut bracher chaque broche du cable de la caméra dans le port Camera de la Raspberry Pi.
-###### Ajouter une image
+![CAM2](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/CAM2.jpg)
 
 ### Connexion du PIR HC-SR501
+![PIR1](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/PIR1.jpg)
 Dans ce projet, nous utiliserons les pin 2 - 6 - 26 mais vous pouvez utilisez d'autres port en suivant la [documentation de la Raspberry](https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf).  
 Identifiez chaque port du PIR en soulevant le "petit chapeau" :
-###### Ajouter une image  
+![PIR2](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/PIR2.jpg)
 
 Tout à d'abord connecter le pin VCC du PIR sur le pin 2 (VCC 5V) de la Raspberry Pi.  
 Après connectez grnd du PIR sur le pin 6 (GRND) de la Raspberry Pi.  
 Pour finir sur le dernier port du PIR (OUT) sur le pin 26 (GPIO 7) de la Raspberry Pi.  
-###### Ajouter une image  
+![PIR3](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/PIR3.jpg)  
 
 
 ## Configuration de la Raspberry
@@ -293,7 +295,7 @@ Réalisation du prototype de support sur SolidWorks puis son impression 3D grâc
 
 
 ## Documents supplémentaires
-[Manuel d'utilisation utilisateur](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/manuel.pdf)   
+[Manuel d'utilisation](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/manuel.pdf)   
 [Cahier des charges](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Cahier_des_charges.pdf)  
 [Planning](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Planning.pdf)  
 [Compte Rendu](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Compte_Rendu.pdf)  
@@ -307,7 +309,7 @@ Membre de l'équipe :
 * Roman Magnier
 
 ## Liens
-[Chaine Youtube](https://www.youtube.com/channel/UCkh9bHsU9Y0lxfIJOGlvY6A?view_as=subscriber)
+[Chaine Youtube](https://www.youtube.com/channel/UCkh9bHsU9Y0lxfIJOGlvY6A?view_as=subscriber)  
 [Site Web](https://alexthegeek.github.io/Projet-Camera-Surveillance/)
 
 ## Contact
