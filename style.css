@@ -170,6 +170,32 @@ body
   display: flex;
 }
 
+.imgrealipad
+{
+  display: flex;
+}
+
+.imgrealiphone
+{
+  display: flex
+}
+
+.imgrealmob
+{
+  display: flex;
+}
+
+.imgrealtab
+{
+  display: flex;
+}
+
+.imgreal
+{
+  height: 560px;
+  margin-left: -100px;
+}
+
 .pied
 {
   text-align: center;
