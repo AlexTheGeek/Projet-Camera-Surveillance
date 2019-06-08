@@ -122,7 +122,7 @@ body
 .corpsd
 {
   width: 20%;
-  height: 460px;
+  height: 500px;
   padding-top: 5px;
   padding-left: 15px;
   margin-left: 10px;
@@ -143,6 +143,31 @@ body
   color: red;
   border-bottom-style: solid;
   border-width: thin;
+}
+
+.prepcam
+{
+  display: flex;
+}
+
+.prepcam2
+{
+  margin-left: 100px;
+}
+
+.preppir
+{
+  display: flex;
+}
+
+.preppir2
+{
+  margin-left: 100px;
+}
+
+.imgconfig
+{
+  display: flex;
 }
 
 .pied
