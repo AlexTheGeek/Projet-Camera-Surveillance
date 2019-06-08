@@ -293,7 +293,7 @@ Développement de l'application avec [Ionic](https://ionicframework.com/)
 Réalisation du prototype de support sur SolidWorks puis son impression 3D grâce à l'imprimante 3D Ultimaker.  
 [Plan de la carte Raspberry Pi 3B+](https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi_MECH_3bplus.pdf)    
 [Plan de la boite Raspberry Pi 3B+](https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi_MECH_3bplus_case.pdf)  
-[Fichier SolidWorks du support (zip)](https://alexthegeek.github.io/Projet-Camera-Surveillance/SolidWorks/SolidWorks_VFinal.zip) 
+[Fichier SolidWorks du support (zip)](https://drive.google.com/file/d/10cG60MQHcWESOI00FiV3FxtPIc2hNC-3/view?usp=sharing) 
 
 
 ## Documents supplémentaires
