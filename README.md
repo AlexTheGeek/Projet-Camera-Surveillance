@@ -6,12 +6,12 @@
 3. [Présentation de la Raspberry Pi](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#pr%C3%A9paration-de-la-raspberry)
     * [Connexion dela caméra](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#connexion-de-la-camera)
     * [Connexion du PIR-HCSR501](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#connexion-du-pir-hc-sr501)
-4. [Configration de la Raspberry Pi](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#configuration-de-la-raspberry)
+4. [Configuration de la Raspberry Pi](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#configuration-de-la-raspberry)
 5. [Installation des dépendances](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#installation-des-d%C3%A9pendances)
     * [Installation d'OpenCV4](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#installation-opencv4)
     * [Installation de Flask](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#installaiton-flask)
     * [Installation de Picamera](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#installation-picamera)
-    * [Instalattion Imutils](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#installation-imutils)
+    * [Installation Imutils](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#installation-imutils)
     * [Installation de Flask-BasicAuth](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#installation-flask-basicauth)
 6. [Personnalisation du programme](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#personnalisation-du-programme)
 7. [Lancement du programme](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#lancement-du-programme)
@@ -26,27 +26,27 @@
 
 ## Présentation du projet
 Dans ce projet nous utilisons une Raspberry Pi 3B+.
-La caméra de surveillance fonctionne avec OpenCV4 pour la détection de mouvement. La caméra enverra un mail contenant une image prise lors d'un mouvement. En complément, un détecteur de mouvement IR permet de détecter de mouvement de personne. La caméra possède aussi un serveur pour voir une vidéo en direct.
+La caméra de surveillance fonctionne avec OpenCV4 pour la détection de mouvement. La caméra enverra un mail contenant une image prise lors d'un mouvement. En complément, un détecteur de mouvement IR permet de détecter le mouvement d'une personne. La caméra possède aussi un serveur pour voir une vidéo en direct.
 
 ## Présentation du matériel
-La Raspberry Pi 3 B+ possède le Wifi 2,4GHz et 5GHz faciitant la connexion de la Raspberry à internet. La Raspberry possède un port ethernet qui permet d'avoir un débit internet plus fiable pour la Raspberry Pi. Vous pouvez vous référez à la documentation officiel de la Raspberry Pi : [présentation](https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf).  
+La Raspberry Pi 3 B+ possède le Wifi 2,4GHz et 5GHz faciitant la connexion de la Raspberry à internet. La Raspberry possède un port éthernet qui permet d'avoir un débit internet plus fiable pour la Raspberry Pi. Vous pouvez vous référez à la documentation officielle de la Raspberry Pi : [présentation](https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf).  
 Nous utilisons aussi le PIR HC-SR501 qui possède une détection de mouvement par infra-rouge.
 
 
 ## Préparation de la Raspberry
-### Connexion de la Camera
+### Connexion de la Caméra
 ![CAM1](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/CAM1.jpg)
-Pour connecter la camera, il faut bracher chaque broche du cable de la caméra dans le port Camera de la Raspberry Pi.
+Pour connecter la caméra, il faut brancher chaque broche du cable de la caméra dans le port Camera de la Raspberry Pi.
 ![CAM2](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/CAM2.jpg)
 
 ### Connexion du PIR HC-SR501
 ![PIR1](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/PIR1.jpg)
-Dans ce projet, nous utiliserons les pin 2 - 6 - 26 mais vous pouvez utilisez d'autres port en suivant la [documentation de la Raspberry](https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf).  
+Dans ce projet, nous utiliserons les pins 2 - 6 - 26 mais vous pouvez utiliser d'autres ports en suivant la [documentation de la Raspberry](https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf).  
 Identifiez chaque port du PIR en soulevant le "petit chapeau" :
 ![PIR2](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/PIR2.jpg)
 
-Tout à d'abord connecter le pin VCC du PIR sur le pin 2 (VCC 5V) de la Raspberry Pi.  
-Après connectez grnd du PIR sur le pin 6 (GRND) de la Raspberry Pi.  
+Tout à d'abord connectez le pin VCC du PIR sur le pin 2 (VCC 5V) de la Raspberry Pi.  
+Après connectez GRND du PIR sur le pin 6 (GRND) de la Raspberry Pi.  
 Pour finir sur le dernier port du PIR (OUT) sur le pin 26 (GPIO 7) de la Raspberry Pi.  
 ![PIR3](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/PIR3.jpg)  
 
@@ -68,35 +68,35 @@ sudo raspistill -o image.png
 ### Installation OpenCV4
 Nous avons besoin d'OpenCV4 (Python 3) pour la détection de mouvement d'objet.
 
-#### Installation des dépendance d'OpenCV4
+#### Installation des dépendances d'OpenCV4
 Commencez par faire les mises à jour de la Raspberry Pi :
 ``````
 sudo apt-get update && sudo apt-get upgrade
 ``````
 
-Installons les outils de développement (CMake) :
+Installez les outils de développement (CMake) :
 ```````
 sudo apt-get install build-essential cmake unzip pkg-config
 ```````
 
-Installons des bibliothèques d'images et de vidéos :
+Installez des bibliothèques d'images et de vidéos :
 ````````
 sudo apt-get install libjpeg-dev libpng-dev libtiff-dev
 sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 sudo apt-get install libxvidcore-dev libx264-dev
 `````````
 
-Installons une interface graphique utilisateur backend (GTK) :
+Installez une interface graphique utilisateur backend (GTK) :
 ```````
 sudo apt-get install libgtk-3-dev
 ````````
 
-Installons un paquet pour GTK :
+Installez un paquet pour GTK :
 ````````
 sudo apt-get install libcanberra-gtk*
 ````````
 
-Installons deux paquets qui contiennent des optimisations numérique pour OpenCV4 :
+Installez deux paquets qui contiennent des optimisations numériques pour OpenCV4 :
 ``````
 sudo apt-get install libatlas-base-dev gfortran
 ``````
@@ -115,26 +115,26 @@ unzip opencv.zip
 unzip opencv_contrib.zip
 ```````
 
-Renommons les répertoires:
+Renommez les répertoires :
 ````````
 mv opencv-4.0.0 opencv
 mv opencv_contrib-4.0.0 opencv_contrib
 `````````
 
 #### Configuration de l'environnement virtuel de Python 3 pour OpenCV4
-Installons un Python Paquet Manager, pip :
+Installez un Python Paquet Manager, pip :
 ``````
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 ```````
 
-Installons `virtualenv` et `virtualenvwrapper` pour un environnment virtuel Python :
+Installez `virtualenv` et `virtualenvwrapper` pour un environnement virtuel Python :
 ```````
 sudo pip install virtualenv virtualenvwrapper
 sudo rm -rf ~/get-pip.py ~/.cache/pip
 ````````
 
-Modifions `~/.profile` :
+Modifiez `~/.profile` :
 ``````
 echo -e "\n# virtualenv and virtualenvwrapper" >> ~/.profile
 echo "export WORKON_HOME=$HOME/.virtualenvs" >> ~/.profile
@@ -147,17 +147,17 @@ Vous pouvez aussi le modifier avec vim ou nano (un éditeur de texte du terminal
 source ~/.profile
 ``````
 
-Créons l'environnement virtuel OpenCV4 + Python 3:
+Créez l'environnement virtuel OpenCV4 + Python 3:
 ```````
 mkvirtualenv cv -p python3
 ````````
 
-Vérifions que nous sommes bien dans l'environnement `cv`
+Vérifiez que vous êtes bien dans l'environnement `cv`
 ``````
 workon cv
 ``````
 
-Installons le paquet Python prérequis pour OpenCV, NumPy :
+Installez le paquet Python prérequis pour OpenCV, NumPy :
 ``````
 pip install numpy
 ``````
@@ -169,7 +169,7 @@ mkdir build
 cd build
 ```````
 
-Execution CMake pour OpenCV4 :
+Exécution CMake pour OpenCV4 :
 ````````
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D CMAKE_INSTALL_PREFIX=/usr/local \
@@ -201,21 +201,21 @@ sudo ldconfig
 
 
 #### Relions OpenCV 4 à votre environnement virtuel Python 3
-Créons un lien symbolique depuis l'installation d'OpenCV dans le répertoire system site-packages vers notre environnement virtuel :
+Créez un lien symbolique depuis l'installation d'OpenCV dans le répertoire system site-packages vers votre environnement virtuel :
 ```````
 cd ~/.virtualenvs/cv/lib/python3.5/site-packages/
 ln -s /usr/local/python/cv2/python-3.5/cv2.cpython-35m-arm-linux-gnueabihf.so cv2.so
 ````````
 
 #### Lancement d'OpenCV4
-OpenCV fonctionne sur un environnement virtuel. Pour y accéder utiliser les commandes suivantes :
+OpenCV fonctionne sur un environnement virtuel. Pour y accéder utilisez les commandes suivantes :
 ``````
 source ~/.profile
 workon cv
 ```````
 
-### Installaiton Flask
-Fask est un microframework pour des applications web Python,pour le routage d'URL de site.
+### Installation Flask
+Fask est un microframework pour des applications web Python, pour le routage d'URL de site.
 `````
 pip install flask
 `````
@@ -227,19 +227,19 @@ pip install picamera
 `````
 
 ### Installation Imutils
-Imutils est une série de fonction de traitement d'image plus simple pour OpenCV4 et Python 3.
+Imutils est une série de fonctions de traitement d'image plus simple pour OpenCV4 et Python 3.
 `````
 pip install imutils
 `````
 
 ### Installation Flask-BasicAuth
-Flask-BasicAuth est une extension Flask qui permet de protéger une page web grâce à une authentification ©par accès de base HTTP.
+Flask-BasicAuth est une extension Flask qui permet de protéger une page web grâce à une authentification par accès de base HTTP.
 `````
 pip install Flask-BasicAuth
 ``````
 
 ## Personnalisation du programme
-Vous pouvez mofier la partie main en modifiant l'authentification au serveur de la raspberry pi :
+Vous pouvez modifier la partie `main` en modifiant l'authentification au serveur de la raspberry pi :
 `````
 app.config['BASIC_AUTH_USERNAME'] = 'admin' #Changez l'utilisateur
 app.config['BASIC_AUTH_PASSWORD'] = 'admin' #Changez le mot de passe
@@ -252,7 +252,7 @@ email_update_interval = 10 #N'envoie un courriel qu'une seule fois dans cet inte
 video_camera = VideoCamera(flip=True) #Crée un objet caméra, retournez verticalement
 object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml") #OpenCV classifier
 ``````
-Vous pouvez aussi utiliser d'autre object de détection en changant `"models/facial_recognition_model.xml"` dans `object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml")` par les autres objets de détection qui sont dans le dossier `models`.
+Vous pouvez aussi utiliser d'autres objets de détection en changeant `"models/facial_recognition_model.xml"` dans `object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml")` par les autres objets de détection qui sont dans le dossier `models`.
 
 Modifiez aussi les informations du mail :
 ``````
@@ -267,15 +267,15 @@ Lancez le programme avec la commande :
 python main.py
 ``````
 Vous pouvez choisir quel type de reconnaissance vous souhaitez :  
-* `main.py` : reconnaissance avec la caméra (OpenCV) et envoie d'un mail avec prise d'une photo du mouvement
-* `main2.py` : reconnaissance avec le PIR et envoie d'un mail avec texte
-* `main2.1.py` : reconnaissance avec le PIR et envoie d'un mail et prise d'une photo du mouvement
-* `main3.py`: reconnaissance avec le PIR et la caméra (facial) et envoie d'un mail et prise d'une photo du mouvement
+* `main.py` : reconnaissance avec la caméra (OpenCV) et envoi d'un mail avec prise d'une photo du mouvement
+* `main2.py` : reconnaissance avec le PIR et envoi d'un mail avec texte
+* `main2.1.py` : reconnaissance avec le PIR et envoi d'un mail et prise d'une photo du mouvement
+* `main3.py`: reconnaissance avec le PIR et la caméra (facial) et envoi d'un mail et prise d'une photo du mouvement
 
 On peut voir le flux vidéo en direct en allant sur `http://<ip_raspberry>:5000` dans un navigateur internet sur le réseau local.  
-Pour visioner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour la raspberry : `http://<ip_box>:<port_ouvert>`(Méthode non sécurisée).  
-De plus, pour un fonctionnement optimal, vous pouvez utiliser une ip statique pour la raspberry pour éviter de rechercher l'ip à chaque fois.  
-Pour connaître l'adresse ip de la raspberry pi vous pouvez taper dans le terminal : `hostname -I`.  
+Pour visionner depuis l'extérieur, vous pouvez  ouvrir un port de votre box pour la Raspberry : `http://<ip_box>:<port_ouvert>`(Méthode non sécurisée).  
+De plus, pour un fonctionnement optimal, vous pouvez utiliser une ip statique pour la Raspberry pour éviter de rechercher l'ip à chaque fois.  
+Pour connaître l'adresse ip de la Raspberry Pi vous pouvez taper dans le terminal : `hostname -I`.  
 
 
 ## Réalisations supplémentaires
@@ -306,7 +306,7 @@ Réalisation du prototype de support sur SolidWorks puis son impression 3D grâc
 Projet de première année STPI à l'INSA Centre Val de Loire.  
 Membre de l'équipe :
 * Alexis Brunet
-* Matthieu Maindroux
+* Matthieu Maindrou
 * Omar Hadhar
 * Roman Magnier
 
