@@ -4,6 +4,14 @@ body
   background-color: white;
 }
 
+.logo
+{
+  display: block;
+  position: absolute;
+  right: 1%;
+  padding-top: 1%;
+}
+
 .tete
 {
   display: flex;
@@ -194,6 +202,42 @@ body
 {
   height: 560px;
   margin-left: -100px;
+}
+
+.imgprep
+{
+  display: flex;
+}
+
+.imgprepu
+{
+  margin-right: 15px;
+}
+
+.imgpres
+{
+  display: flex;
+}
+
+.imgpresu
+{
+  margin-right: 15px;
+}
+
+.lance
+{
+  display: flex;
+}
+
+.lanceg
+{
+  width: 70%;
+}
+
+.lanced
+{
+  margin-left: 10px;
+  width: 25%;
 }
 
 .pied
