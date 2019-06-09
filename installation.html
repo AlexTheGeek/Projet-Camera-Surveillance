@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-  <title>Projet INSA | Accueil</title>
+  <title>Projet Caméra INSA | Installation des dépendances</title>
 </head>
 
 <body>
@@ -32,22 +32,220 @@
     <div class="corpsg">
     <h2>Installation des dépendances</h2>
     <h3 id="opencv4">Installation d'OpenCV4</h3>
+    <p>
+      OpenCV4 permet la détection de mouvement d'objet.
+    </p>
     <h4>Installation des dépendances d'OpenCV4</h4>
     <div class="code">
       <code>
-    
+        sudo apt-get update && sudo apt-get upgrade
       </code>
     </div>
+    <p>
+      Installez les outils de développement (CMake) :
+    </p>
+    <div class="code">
+      <code>
+        sudo apt-get install build-essential cmake unzip pkg-config
+      </code>
+    </div>
+    <p>
+      Installez les bibliothèques d'images et de vidéos :
+    </p>
+    <div class="code">
+      <code>
+        sudo apt-get install libjpeg-dev libpng-dev libtiff-dev <br>
+        sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev <br>
+        sudo apt-get install libxvidcore-dev libx264-dev
+      </code>
+    </div>
+    <p>
+      Installez une interface graphique utilisateur backend (GTK) :
+    </p>
+    <div class="code">
+      <code>
+        sudo apt-get install libgtk-3-dev
+      </code>
+    </div>
+    <p>
+      Installez un paquet pour GTK :
+    </p>
+    <div class="code">
+      <code>
+        sudo apt-get install libcanberra-gtk*
+      </code>
+    </div>
+    <p>
+      Installez deux paquets qui contiennent des optimisations numérique pour OpenCV4 :
+    </p>
+    <div class="code">
+      <code>
+        sudo apt-get install libatlas-base-dev gfortran
+      </code>
+    </div>
+    <p>
+      Installez Python 3 :
+    </p>
+    <div class="code">
+      <code>
+        sudo apt-get install python3-dev
+      </code>
+    </div>
+    <br>
     <h4>Téléchargement d'OpenCV4 pour la Raspberry Pi</h4>
-    
+    <p>
+      Naviguez jusqu'au dossier <code class="codet">Home</code> de votre Rapsberry Pi.
+    </p>
+    <div class="code">
+      <code>
+        wget -O opencv.zip https://github.com/opencv/opencv/archive/4.0.0.zip <br>
+        wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.0.0.zip <br>
+        unzip opencv.zip <br>
+        unzip opencv_contrib.zip
+      </code>
+    </div>
+    <p>
+      Renommons les répertoires :
+    </p>
+    <div class="code">
+      <code>
+        mv opencv-4.0.0 opencv <br>
+        mv opencv_contrib-4.0.0 opencv_contrib
+      </code>
+    </div>
+    <br>
     <h4>Configuration de l'envrionnement virtuel de Python 3 pour OpenCV4</h4>
-    
+    <p>
+      Installez un Python Paquet Manager, pip :
+    </p>
+    <div class="code">
+      <code>
+        wget https://bootstrap.pypa.io/get-pip.py <br>
+        sudo python3 get-pip.py
+      </code>
+    </div>
+    <p>
+      Installez <code class="codet">virtualenv</code> et <code class="codet">virtualenvwrapper</code> pour un environnement virtuel Python :
+    </p>
+    <div class="code">
+      <code>
+        sudo pip install virtualenv virtualenvwrapper <br>
+        sudo rm -rf ~/get-pip.py ~/.cache/pip
+      </code>
+    </div>
+    <p>
+      Modifions <code class="codet">~/.profile</code> :
+    </p>
+    <div class="code">
+      <code>
+        echo -e "\n# virtualenv and virtualenvwrapper" >> ~/.profile <br>
+        echo "export WORKON_HOME=$HOME/.virtualenvs" >> ~/.profile <br>
+        echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> ~/.profile <br>
+        echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.profile
+      </code>
+    </div>
+    <p>
+      Vous pouvez aussi le modifier avec vim ou nano (un éditeur de texte du terminal).
+    </p>
+    <div class="code">
+      <code>
+        source ~/.profile
+      </code>
+    </div>
+    <p>
+      Créez l'environnement virtuel OpenCV4 + Python 3 :
+    </p>
+    <div class="code">
+      <code>
+        mkvirtualenv cv -p python3
+      </code>
+    </div>
+    <p>
+      Vérifions que nous somme bien dans l'environnement <code class="codet">cv</code> :
+    </p>
+    <div class="code">
+      <code>
+        workon cv
+      </code>
+    </div>
+    <p>
+      Installez le paquet Python prérequis pour OpenCV, NumPy :
+    </p>
+    <div class="code">
+      <code>
+        pip install numpy
+      </code>
+    </div>
+    <br>
     <h4>CMake et compilation d'OpenCV4</h4>
-    
+    <div class="code">
+      <code>
+        cd ~/opencv <br>
+        mkdir build <br>
+        cd build
+      </code>
+    </div>
+    <p>
+      Exécution CMake pour OpenCV4 :
+    </p>
+    <div class="code">
+      <code>
+        cmake -D CMAKE_BUILD_TYPE=RELEASE \ <br>
+              -D CMAKE_INSTALL_PREFIX=/usr/local \ <br>
+              -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \ <br>
+              -D ENABLE_NEON=ON \ <br>
+              -D ENABLE_VFPV3=ON \ <br>
+              -D BUILD_TESTS=OFF \ <br>
+              -D OPENCV_ENABLE_NONFREE=ON \ <br>
+              -D INSTALL_PYTHON_EXAMPLES=OFF \ <br>
+              -D BUILD_EXAMPLES=OFF ..
+      </code>
+    </div>
+    <p>
+      Vérifiez que dans le Terminal vous avez <code class="codet">Non-free alorithms: YES</code>. <br>
+      Dans <code class="codet">Python 3</code> : <br>
+      <code class="codet">Interpreter: .../.virtualenvs/cv/...</code> <br>
+      <code class="codet">numpy: .../.virtualenvs/cv/...</code> <br>
+      Compilation d'OpenCV4 :
+    </p>
+    <div class="code">
+      <code>
+        make -j4
+      </code>
+    </div>
+    <p>
+      Si des erreurs apparaissent vous pouvez seulement faire <code class="codet">make</code>. <br>
+      Installation d'OpenCV4 :
+    </p>
+    <div class="code">
+      <code>
+        sudo make install <br>
+        sudo ldconfig
+      </code>
+    </div>
+    <br>
     <h4>Relions OpenCV4 à votre environnement virtuel Python 3</h4>
-    
+    <p>
+      Créez un lien symbolique depuis l'installation d'OpenCV4 dans le répertoire system site-packages vers notre environnement virtuel :
+    </p>
+    <div class="code">
+      <code>
+        cd ~/.virtualenvs/cv/lib/python3.5/site-packages/ <br>
+        ln -s /usr/local/python/cv2/python-3.5/cv2.cpython-35m-arm-linux-gnueabihf.so cv2.so
+      </code>
+    </div>
+    <br>
     <h4>Lancement d'OpenCV4</h4>
-    
+    <p>
+      OpenCV4 fonctionne sur un environnement virtuel. Pour y accéder utilisez les commandes suivantes :
+    </p>
+    <div class="code">
+      <code>
+        source ~/.profile <br>
+        workon cv
+      </code>
+    </div>
+    <br>
     <h3 id="flask">Installation de Flask</h3>
     Flask est un microframework pour des applications web Python,pour le routage d'URL de site.
     <div class="code">
@@ -55,7 +253,7 @@
             pip install flask
       </code>
     </div>
-    
+    <br>
     <h3 id="picamera">Installation de PiCamera</h3>
     PiCamera est un paquet qui permet d'avoir une interface pour le module caméra Raspberry Pi pour Python 3.
     <div class="code">
@@ -63,7 +261,7 @@
             pip install picamera
       </code>
     </div>
-    
+    <br>
     <h3 id="imutils">Installation Imutils</h3>
     Imutils est une série de fonction de traitement d'image plus simple pour OpenCV4 et Python 3.
     <div class="code">
@@ -71,7 +269,7 @@
             pip install imutils
       </code>
     </div>
-    
+    <br>
     <h3 id="flaskbasicauth">Installation Flask-BasicAuth</h3>
     Flask-BasicAuth est une extension Flask qui permet de protéger une page web grâce à une authentification ©par accès de
     base HTTP.
@@ -108,6 +306,7 @@
             <li><a href="realsup.html#realsup">Réalisation du support</a></li>
           </ul>
           <li><a href="documents.html">Documents supplémentaires</a></li>
+          <li><a href="videotest.html">Vidéo de test</a></li>
           <li><a href="https://github.com/AlexTheGeek/Projet-Camera-Surveillance">GitHub</a></li>
           <li><a href="https://www.youtube.com/channel/UCkh9bHsU9Y0lxfIJOGlvY6A?view_as=subscriber">Chaine Youtube</a></li>
         </ol>
