@@ -20,8 +20,9 @@
     * [Réalisation du support pour la caméra et le PIR](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#r%C3%A9alisation-du-support-pour-la-cam%C3%A9ra-et-du-pir)
 9. [Documents supplémentaires](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#documentation)
 10. [Crédit](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#cr%C3%A9dit)
-11. [Liens](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#liens)
-12. [Contact](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#contact)
+11. [Possibilités supplémentaires](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#cr%C3%A9dit)
+12. [Liens](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#liens)
+13. [Contact](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#contact)
 
 
 ## Présentation du projet
@@ -301,6 +302,12 @@ Réalisation du prototype de support sur SolidWorks puis son impression 3D grâc
 [Cahier des charges](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Cahier_des_charges.pdf)  
 [Planning](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Planning.pdf)  
 [Compte Rendu](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Compte_Rendu.pdf)  
+
+## Possibilités supplémentaires
+Nous avons aussi la possibilité d'envoyer une notification push sur votre téléphone (iOS ou Android) en utilisant IFTTT.  
+Intégrez l'API de IFTTT dans votre code Python (vous pouvez la trouver en recherchant Webhooks dans IFTTT).  
+Par la suite, vous devez créer une Applet de la manière suivant : If `Webhooks` then `Notifications`.  
+
 
 ## Crédit
 Projet de première année STPI à l'INSA Centre Val de Loire.  
