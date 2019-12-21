@@ -313,7 +313,7 @@ Par la suite, vous devez créer une Applet de la manière suivant : If `Webhooks
 Projet de première année STPI à l'INSA Centre Val de Loire.  
 Membre de l'équipe :
 * Alexis Brunet
-* Matthieu Maindrou
+* Matthieu Maindroux
 * Omar Hadhar
 * Roman Magnier
 
