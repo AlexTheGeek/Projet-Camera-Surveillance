@@ -307,6 +307,7 @@ Réalisation du prototype de support sur SolidWorks puis son impression 3D grâc
 Nous avons aussi la possibilité d'envoyer une notification push sur votre téléphone (iOS ou Android) en utilisant IFTTT.  
 Intégrez l'API de IFTTT dans votre code Python (vous pouvez la trouver en recherchant Webhooks dans IFTTT).  
 Par la suite, vous devez créer une Applet de la manière suivant : If `Webhooks` then `Notifications`.  
+Vous pouvez sinon vous utiliser le bot IFTTT comme par exemple sur Messenger pour vous envoyer des messages lors de la détection de mouvement.
 
 
 ## Crédit
