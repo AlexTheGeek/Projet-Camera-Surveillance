@@ -1,5 +1,6 @@
-# Projet Caméra Surveillance
-
+# Projet Caméra Surveillance / Security camera on a Raspberry Pi
+To go to the [English part](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#english)
+# Français
 ## Sommaire
 1. [Présentation du projet](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#pr%C3%A9sentation-du-projet)
 2. [Présentation du matériel](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#pr%C3%A9sentation-du-mat%C3%A9riel)
@@ -321,6 +322,328 @@ Membre de l'équipe :
 ## Liens
 [Chaine Youtube](https://www.youtube.com/channel/UCkh9bHsU9Y0lxfIJOGlvY6A?view_as=subscriber)  
 [Site Web](https://alexthegeek.github.io/Projet-Camera-Surveillance/)
+
+## Contact
+Mail : [projetcamera2019@gmail.com](mailto:projetcamera2019@gmail.com)
+
+# English
+## Content
+1. [Présentation du projet](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#pr%C3%A9sentation-du-projet)
+2. [Présentation du matériel](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#pr%C3%A9sentation-du-mat%C3%A9riel)
+3. [Présentation de la Raspberry Pi](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#pr%C3%A9paration-de-la-raspberry)
+    * [Connexion dela caméra](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#connexion-de-la-camera)
+    * [Connexion du PIR-HCSR501](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#connexion-du-pir-hc-sr501)
+4. [Configuration de la Raspberry Pi](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#configuration-de-la-raspberry)
+5. [Installation des dépendances](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#installation-des-d%C3%A9pendances)
+    * [Installation d'OpenCV4](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#installation-opencv4)
+    * [Installation de Flask](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#installaiton-flask)
+    * [Installation de Picamera](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#installation-picamera)
+    * [Installation Imutils](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#installation-imutils)
+    * [Installation de Flask-BasicAuth](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#installation-flask-basicauth)
+6. [Personnalisation du programme](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#personnalisation-du-programme)
+7. [Lancement du programme](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#lancement-du-programme)
+8. [Réalisations supplémentaires](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#r%C3%A9alisations-suppl%C3%A9mentaires)
+    * [Réalisation de l'application](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#r%C3%A9alisation-de-lapplication)
+    * [Réalisation du support pour la caméra et le PIR](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#r%C3%A9alisation-du-support-pour-la-cam%C3%A9ra-et-du-pir)
+9. [Documents supplémentaires](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#documentation)
+10. [Crédit](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#cr%C3%A9dit)
+11. [Possibilités supplémentaires](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#cr%C3%A9dit)
+12. [Liens](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#liens)
+13. [Contact](https://github.com/AlexTheGeek/Projet-Camera-Surveillance#contact)
+
+
+## Project presentation
+In this project we use a Raspberry Pi 3B+.  
+The surveillance camera works on OpenCV4 for motion detection. The camera will send an email containing an image taken during a movement. In addition, an IR motion detector can detect the movement of a person. The camera also has a server to view live video.
+
+## Presentation of materials
+The Raspberry Pi 3 B+ has 2.4GHz and 5GHz Wifi making it easy to connect the Raspberry to the internet. The Raspberry has an ethernet port which allows a more reliable internet speed for the Raspberry Pi. You can refer to the official documentation of the Raspberry Pi: [presentation](https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf).  
+We also use the PIR HC-SR501 which has infrared motion detection.
+  
+## Presentation of the Raspberry Pi
+### Connexion of the camera
+![CAM1](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/CAM1.jpg)
+To connect the camera, plug each pin of the camera cable into the Camera port of the Raspberry Pi.  
+![CAM2](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/CAM2.jpg)
+
+### Connexion of PIR HC-SR501
+![PIR1](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/PIR1.jpg)
+In this project we will use pins 2 - 6 - 26 but you can use other ports by following the [Raspberry documentation](https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf).  
+Identify each PIR port by lifting the "little hat":
+![PIR2](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/PIR2.jpg)
+
+First connect the VCC pin of the PIR to pin 2 (VCC 5V) of the Raspberry Pi.  
+Then connect GRND of the PIR to pin 6 (GRND) of the Raspberry Pi.  
+Finally connect the last port of the PIR (OUT) to pin 26 (GPIO 7) of the Raspberry Pi.  
+![PIR3](https://alexthegeek.github.io/Projet-Camera-Surveillance/Images/PIR3.jpg)  
+
+
+## Configuration of the Raspberry Pi
+In this project, we use a Quimat Raspberry Pi Camera IR. First we need to activate the camera on the Raspberry.
+
+Open the terminal and execute:
+````
+sudo raspi-config
+`````
+Select `Interface Options` then `Camera` and activate it then click on `Finish`.
+  
+To check that the camera is working enter:
+`````
+sudo raspistill -o image.png
+``````
+## Installation of dependencies
+### OpenCV4 installation 
+We need OpenCV4 (Python 3) for object motion detection.
+
+#### Installation of dependencies of OpenCV4
+Start by updating the Raspberry Pi:
+``````
+sudo apt-get update && sudo apt-get upgrade
+``````
+
+Install the development tools (CMake):
+```````
+sudo apt-get install build-essential cmake unzip pkg-config
+```````
+
+Install image and video libraries:
+````````
+sudo apt-get install libjpeg-dev libpng-dev libtiff-dev
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+sudo apt-get install libxvidcore-dev libx264-dev
+`````````
+
+Install a backend graphical user interface (GTK):
+```````
+sudo apt-get install libgtk-3-dev
+````````
+
+Install a package for GTK:
+````````
+sudo apt-get install libcanberra-gtk*
+````````
+
+Install two packages that contain numerical optimizations for OpenCV4:
+``````
+sudo apt-get install libatlas-base-dev gfortran
+``````
+
+Installing Python 3:
+```````
+sudo apt-get install python3-dev
+````````
+
+#### Download OpenCV4 for Rapsberry Pi
+Navigate to the `Home` folder on your Raspberry Pi.
+```````
+wget -O opencv.zip https://github.com/opencv/opencv/archive/4.0.0.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.0.0.zip
+unzip opencv.zip
+unzip opencv_contrib.zip
+```````
+
+Rename the directories:
+````````
+mv opencv-4.0.0 opencv
+mv opencv_contrib-4.0.0 opencv_contrib
+`````````
+
+#### Configuring the Python 3 virtual environment for OpenCV4
+Install a Python Package Manager, pip:
+``````
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3 get-pip.py
+```````
+
+Install `virtualenv` and `virtualenvwrapper` for a Python virtual environment:
+```````
+sudo pip install virtualenv virtualenvwrapper
+sudo rm -rf ~/get-pip.py ~/.cache/pip
+````````
+
+Edit `~/.profile`:
+``````
+echo -e "\n# virtualenv and virtualenvwrapper" >> ~/.profile
+echo "export WORKON_HOME=$HOME/.virtualenvs" >> ~/.profile
+echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> ~/.profile
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.profile
+```````
+You can also edit it with vim or nano (a text editor on the terminal).  
+
+``````
+source ~/.profile
+``````
+
+Create the OpenCV4 + Python 3 virtual environment:
+```````
+mkvirtualenv cv -p python3
+````````
+
+Make sure you are in the `cv` environment.
+``````
+workon cv
+``````
+
+Install the Python package required for OpenCV, NumPy:
+``````
+pip install numpy
+``````
+
+#### CMake and compiling OpenCV4
+``````
+cd ~/opencv
+mkdir build
+cd build
+```````
+
+Running CMake for OpenCV4:
+````````
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+      -D CMAKE_INSTALL_PREFIX=/usr/local \
+      -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
+      -D ENABLE_NEON=ON \
+      -D ENABLE_VFPV3=ON \
+      -D BUILD_TESTS=OFF \
+      -D OPENCV_ENABLE_NONFREE=ON \
+      -D INSTALL_PYTHON_EXAMPLES=OFF \
+      -D BUILD_EXAMPLES=OFF ..
+``````````  
+
+Verify that you have `Non-free algorithms: YES` in the terminal.  
+In `Python 3`:  
+`Interpreter: .../.virtualenvs/cv/...`  
+`numpy: .../.virtualenvs/cv/...`  
+
+Compiling OpenCV4 :  
+````
+make -j4
+`````
+If errors appear you can only do `make`.  
+
+Installing OpenCV4
+`````
+sudo make install
+sudo ldconfig
+```````
+
+
+#### Connect OpenCV 4 to your Python 3 virtual environment
+Create a symbolic link from the OpenCV installation in the system site-packages directory to your virtual environment:  
+```````
+cd ~/.virtualenvs/cv/lib/python3.5/site-packages/
+ln -s /usr/local/python/cv2/python-3.5/cv2.cpython-35m-arm-linux-gnueabihf.so cv2.so
+````````
+
+#### Launch of OpenCV4
+OpenCV runs on a virtual environment. To access it use the following commands:
+``````
+source ~/.profile
+workon cv
+```````
+
+### Flask installation
+Fask is a microframework for Python web applications, for site URL routing.
+`````
+pip install flask
+`````
+
+### PiCamera installation 
+PiCamera is a package that provides an interface for the Raspberry Pi camera module for Python 3.
+`````
+pip install picamera
+`````
+
+### Imutils installation 
+Imutils is a set of simpler image processing functions for OpenCV4 and Python 3.
+`````
+pip install imutils
+`````
+
+### Flask-BasicAuth installation 
+Flask-BasicAuth is a Flask extension that allows you to protect a web page through basic HTTP access authentication.
+`````
+pip install Flask-BasicAuth
+``````
+
+## Personnalisation du programme
+You can change the `main` part by modifying the authentication to the raspberry pi server:
+`````
+app.config['BASIC_AUTH_USERNAME'] = 'admin' #Change the username
+app.config['BASIC_AUTH_PASSWORD'] = 'admin' #Change the password
+app.config['BASIC_AUTH_FORCE'] = True
+`````
+
+In the main, changing parameters :
+``````
+email_update_interval = 10 #Sends an email only once in that time interval.
+video_camera = VideoCamera(flip=True) #Create a camera object, flip vertically
+object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml") #OpenCV classifier
+``````
+You can also use other detection objects by changing `"models/facial_recognition_model.xml"` in `object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml")` by the other detection objects that are in the `models` directory.
+
+Also change the information in the :
+``````
+fromEmail = 'adressemaile@gmail.com' #Enter a Google email address to send email
+fromEmailPassword = 'mdp' #Enter Google Account password (No 2-Step Verification)
+toEmail = 'adressemaild@gmail.com' #Enter a receiving email address
+``````
+
+## Start the program
+Start the program with the command :
+``````
+python hand.py
+``````
+You can choose what type of recognition you want:  
+* `main.py`: recognition with the camera (OpenCV) and sending an email with a picture of the movement
+* `main2.py`: recognition with the PIR and sending a mail with text
+* `main2.1.py`: recognition with the PIR and sending a mail and taking a picture of the movement
+* `main3.py`: recognition with PIR and (facial) camera and sending an email and taking a picture of the movement
+
+The live video stream can be viewed by going to `http://<ip_raspberry>:5000` in a web browser on the local network.  
+To view from outside, you can open a port in your box for the Raspberry: `http://<ip_box>:<open_port>`(Unsecured method).  
+Also, for optimal performance, you can use a static ip for the Raspberry to avoid searching for the ip every time.  
+To find out the ip address of the Raspberry Pi you can type `hostname -I` in the terminal.  
+
+
+## Additional Achievements
+### Application realization
+Start of the application a prototype of the application made on Adobe XD.  
+[Prototype (Adobe XD)](https://alexthegeek.github.io/Projet-Camera-Surveillance/Application/Prototype_Cam.xd)  
+[Prototype (zip --> png)](https://alexthegeek.github.io/Projet-Camera-Surveillance/Application/Prototype_App.zip)  
+[Prototype (zip --> png(iPhone - iPad - Android (Mobile and Tablet))](https://alexthegeek.github.io/Projet-Camera-Surveillance/Application/Prototype_App_V2.zip)  
+[Final Prototype](https://alexthegeek.github.io/Projet-Camera-Surveillance/Application/Prototype_App_V3.zip)  
+Application development with [Ionic](https://ionicframework.com/)  
+
+### Realization of the support for the camera and the PIR
+Realization of the support prototype on SolidWorks then its 3D printing thanks to the Ultimaker 3D printer.  
+[Raspberry Pi 3B+ card plan](https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi_MECH_3bplus.pdf)  
+[Raspberry Pi 3B+ box plan](https://www.raspberrypi.org/documentation/hardware/raspberrypi/mechanical/rpi_MECH_3bplus_case.pdf)  
+[Support SolidWorks file (zip)](https://drive.google.com/file/d/10cG60MQHcWESOI00FiV3FxtPIc2hNC-3/view?usp=sharing) 
+
+
+## Additional documents
+[User manual](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/manuel.pdf)   
+[Specifications](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Cahier_des_charges.pdf)  
+[Planning](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Planning.pdf)  
+[Debriefing](https://alexthegeek.github.io/Projet-Camera-Surveillance/Documents/Compte_Rendu.pdf)  
+
+## Additional possibilities
+We also have the ability to send a push notification to your phone (iOS or Android) using IFTTT.  
+Integrate the IFTTT API into your Python code (you can find it by searching Webhooks in IFTTT).  
+Then you need to create an Applet as follows: If `Webhooks` then `Notifications`.  
+Otherwise you can use the IFTTT bot as for example on Messenger to send you messages when motion detection is detected.
+
+## Credit
+First year project at the INSA Centre Val de Loire.  
+Team's members :
+* Alexis Brunet
+* Matthieu Maindroux
+* Omar Hadhar
+* Roman Magnier
+
+## Links
+[Youtube Channel](https://www.youtube.com/channel/UCkh9bHsU9Y0lxfIJOGlvY6A?view_as=subscriber)  
+[Website](https://alexthegeek.github.io/Projet-Camera-Surveillance/)
 
 ## Contact
 Mail : [projetcamera2019@gmail.com](mailto:projetcamera2019@gmail.com)
